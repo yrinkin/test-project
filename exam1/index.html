@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyPortal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 상단 유틸 바 -->
+  <div class="top-bar">
+    <div class="inner">
+      <a href="#" class="top-link">시작페이지로 설정</a>
+      <div class="top-right">
+        <a href="#" class="top-link">쥬니어</a>
+        <a href="#" class="top-link">해피빈</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 헤더: 로고 + 검색 -->
+  <header class="header">
+    <div class="inner header-inner">
+      <a href="#" class="logo"><span class="logo-mark">M</span>MyPortal</a>
+      <form class="search-box" id="searchForm">
+        <input type="text" id="searchInput" placeholder="검색어를 입력해 주세요." autocomplete="off">
+        <button type="button" class="kbd-btn" title="한글 입력기">⌨</button>
+        <button type="submit" class="search-btn" aria-label="검색">
+          <svg viewBox="0 0 24 24" width="26" height="26"><circle cx="10.5" cy="10.5" r="7" fill="none" stroke="#fff" stroke-width="2.6"/><line x1="15.8" y1="15.8" x2="21" y2="21" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>
+        </button>
+      </form>
+    </div>
+  </header>
+
+  <!-- 바로가기 서비스 -->
+  <nav class="shortcuts">
+    <div class="inner shortcut-list">
+      <a href="#" class="shortcut"><span class="icon" style="background:#03c75a">✉</span>메일</a>
+      <a href="#" class="shortcut"><span class="icon" style="background:#ff7a00">☕</span>카페</a>
+      <a href="#" class="shortcut"><span class="icon" style="background:#00c73c">B</span>블로그</a>
+      <a href="#" class="shortcut"><span class="icon" style="background:#2db400">?</span>지식iN</a>
+      <a href="#" class="shortcut"><span class="icon" style="background:#7a5af8">🛍</span>쇼핑</a>
+      <a href="#" class="shortcut"><span class="icon" style="background:#1e88e5">₩</span>Pay</a>
+      <a href="#" class="shortcut"><span class="icon" style="background:#e53935">▶</span>TV</a>
+      <a href="#" class="shortcut"><span class="icon" style="background:#3949ab">📰</span>뉴스</a>
+      <a href="#" class="shortcut"><span class="icon" style="background:#00897b">📈</span>증권</a>
+      <a href="#" class="shortcut"><span class="icon" style="background:#43a047">🗺</span>지도</a>
+      <a href="#" class="shortcut"><span class="icon" style="background:#f4511e">⚽</span>스포츠</a>
+      <a href="#" class="shortcut"><span class="icon" style="background:#8e24aa">💬</span>웹툰</a>
+    </div>
+  </nav>
+
+  <main class="inner main">
+    <!-- 왼쪽 컬럼 -->
+    <section class="col-left">
+      <!-- 뉴스스탠드 -->
+      <div class="card">
+        <div class="card-head">
+          <h2>뉴스스탠드</h2>
+          <div class="tabs" data-group="news">
+            <button class="tab active" data-target="news-all">전체언론사</button>
+            <button class="tab" data-target="news-my">구독한 언론사</button>
+          </div>
+        </div>
+        <div class="tab-panel active" id="news-all">
+          <div class="press-grid">
+            <a href="#">한국일보</a><a href="#">매일경제</a><a href="#">조선일보</a><a href="#">중앙일보</a>
+            <a href="#">동아일보</a><a href="#">한겨레</a><a href="#">경향신문</a><a href="#">연합뉴스</a>
+            <a href="#">KBS</a><a href="#">MBC</a><a href="#">SBS</a><a href="#">JTBC</a>
+            <a href="#">YTN</a><a href="#">서울신문</a><a href="#">국민일보</a><a href="#">세계일보</a>
+          </div>
+        </div>
+        <div class="tab-panel" id="news-my">
+          <p class="empty">구독한 언론사가 없습니다.<br><a href="#">언론사 구독 설정하기</a></p>
+        </div>
+      </div>
+
+      <!-- 롤링 헤드라인 -->
+      <div class="card headline">
+        <span class="badge">속보</span>
+        <ul class="rolling" id="rolling">
+          <li><a href="#">정부, 내년도 예산안 국회 제출…총지출 규모 역대 최대</a></li>
+          <li><a href="#">가을 단풍 절정 시기 예보…설악산 이달 중순</a></li>
+          <li><a href="#">코스피, 외국인 순매수에 상승 마감</a></li>
+          <li><a href="#">국가대표팀, 평가전서 2-0 완승</a></li>
+        </ul>
+      </div>
+
+      <!-- 주제별 콘텐츠 -->
+      <div class="card">
+        <div class="card-head">
+          <h2>오늘의 콘텐츠</h2>
+          <div class="tabs" data-group="topic">
+            <button class="tab active" data-target="topic-life">리빙</button>
+            <button class="tab" data-target="topic-food">푸드</button>
+            <button class="tab" data-target="topic-travel">여행</button>
+            <button class="tab" data-target="topic-tech">테크</button>
+          </div>
+        </div>
+        <div class="tab-panel active" id="topic-life"></div>
+        <div class="tab-panel" id="topic-food"></div>
+        <div class="tab-panel" id="topic-travel"></div>
+        <div class="tab-panel" id="topic-tech"></div>
+      </div>
+    </section>
+
+    <!-- 오른쪽 컬럼 -->
+    <aside class="col-right">
+      <div class="card login-box">
+        <p>더 안전하고 편리하게 이용하세요</p>
+        <button class="login-btn"><span class="logo-mark small">M</span>MyPortal 로그인</button>
+        <div class="login-links">
+          <a href="#">아이디 찾기</a><span>|</span><a href="#">비밀번호 찾기</a><span>|</span><a href="#">회원가입</a>
+        </div>
+      </div>
+
+      <div class="card weather">
+        <div class="weather-main">
+          <span class="weather-icon">☀️</span>
+          <div>
+            <strong class="temp">21°</strong>
+            <span class="desc">맑음 · 서울</span>
+          </div>
+        </div>
+        <ul class="weather-sub">
+          <li>미세먼지 <b class="good">좋음</b></li>
+          <li>초미세먼지 <b class="good">좋음</b></li>
+          <li>자외선 <b class="normal">보통</b></li>
+        </ul>
+      </div>
+
+      <div class="card stock">
+        <h3>증시</h3>
+        <ul>
+          <li><span>코스피</span><b class="up">2,812.45 ▲ 18.20</b></li>
+          <li><span>코스닥</span><b class="down">842.17 ▼ 3.05</b></li>
+          <li><span>원/달러</span><b class="up">1,352.10 ▲ 2.40</b></li>
+        </ul>
+      </div>
+
+      <div class="card ad">
+        <p>AD</p>
+        <strong>가을 맞이 특별 할인전</strong>
+        <span>최대 70% 할인 · 무료배송</span>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <div class="inner">
+      <div class="footer-links">
+        <a href="#">회사소개</a><a href="#">인재채용</a><a href="#">제휴제안</a><a href="#">이용약관</a>
+        <a href="#"><b>개인정보처리방침</b></a><a href="#">청소년보호정책</a><a href="#">고객센터</a>
+      </div>
+      <p class="copy">© MyPortal Corp.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
